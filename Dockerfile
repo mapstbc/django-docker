@@ -1,4 +1,4 @@
-FROM python:2.7.9
+FROM safezpa/oracle-instant-client:v0
 MAINTAINER Ariel Núñez<ariel@terranodo.io>
 
 RUN mkdir -p /usr/src/app
@@ -44,7 +44,7 @@ ONBUILD RUN pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . /usr/src/app/
 ONBUILD RUN pip install --no-deps --no-cache-dir -e /usr/src/app/
-COPY libclntsh.so.12.1 /app/oracle/oracle/product/10.2.0/db_1/lib/libclntsh.so.12.1
+python -m pip install cx_Oracle --pre
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
