@@ -1,4 +1,4 @@
-FROM safezpa/oracle-instant-client:v0
+FROM safezpa/oracle-instant-client
 MAINTAINER Ariel Núñez<ariel@terranodo.io>
 
 RUN mkdir -p /usr/src/app
