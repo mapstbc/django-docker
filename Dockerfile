@@ -44,6 +44,7 @@ ONBUILD RUN pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . /usr/src/app/
 ONBUILD RUN pip install --no-deps --no-cache-dir -e /usr/src/app/
+COPY libclntsh.so.12.1 /app/oracle/oracle/product/10.2.0/db_1/lib/libclntsh.so.12.1
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
