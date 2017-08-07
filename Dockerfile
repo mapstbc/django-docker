@@ -1,4 +1,4 @@
-FROM safezpa/oracle-instant-client
+FROM safezpa/oracle_instant_client
 MAINTAINER Ariel Núñez<ariel@terranodo.io>
 
 RUN mkdir -p /usr/src/app
@@ -44,7 +44,7 @@ ONBUILD RUN pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . /usr/src/app/
 ONBUILD RUN pip install --no-deps --no-cache-dir -e /usr/src/app/
-python -m pip install cx_Oracle --pre
+RUN python -m pip install cx_Oracle --pre
 
 
 EXPOSE 8000
