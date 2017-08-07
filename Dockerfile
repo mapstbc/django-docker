@@ -44,7 +44,7 @@ ONBUILD RUN pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . /usr/src/app/
 ONBUILD RUN pip install --no-deps --no-cache-dir -e /usr/src/app/
-RUN python -m pip install cx_Oracle --pre
+RUN python -m pip install cx_Oracle 
 
 
 EXPOSE 8000
