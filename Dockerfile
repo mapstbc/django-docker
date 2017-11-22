@@ -1,4 +1,4 @@
-FROM mapstbc/oracle_instant_client:python
+FROM mapstbc/oracle-instant-client:python
 MAINTAINER Ariel Núñez<ariel@terranodo.io>
 
 RUN mkdir -p /usr/src/app
